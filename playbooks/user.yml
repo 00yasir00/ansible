@@ -8,4 +8,15 @@
         comment: a1
         uid: 1090
         group: sudo
+- name: multifile creation in allservers playbook
+  hosts: webservers
+  tasks:
+    - name: multiple file creation using list
+      file:
+        path: "/tmp/{{item}}"
+        state: touch
+      with_items:
+        - t1.txt
+        - t2.txt
+        - t3.txt
 ...
