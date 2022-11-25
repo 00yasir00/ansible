@@ -1,0 +1,10 @@
+---
+- name: install and update vim
+  hosts: webservers
+  tasks: 
+    - name: vim update
+      apt:
+        update_cache: yes
+    - name: vim install
+      apt:
+        name: vim

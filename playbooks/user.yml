@@ -1,0 +1,11 @@
+---
+- name: user creation playbook
+  hosts: webservers
+  tasks:
+    - name: adding user
+      user:
+        name: a1
+        comment: a1
+        uid: 1090
+        group: sudo
+...
